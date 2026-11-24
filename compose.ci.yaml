@@ -1,0 +1,8 @@
+
+services:
+  backend:
+    env_file: !reset []
+    environment:
+      PORT: 5000
+      NODE_ENV: development
+      MONGODB_URI: mongodb://mongodb:27017/employeeDB

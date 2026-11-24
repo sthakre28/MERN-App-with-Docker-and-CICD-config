@@ -47,7 +47,7 @@ jobs:
         run: npm run build
 
       - name: Validate Docker Compose
-        run: docker compose config -q
+        run: docker compose -f compose.yaml -f compose.ci.yaml config -q
 
       - name: Build backend Docker image
         run: docker build -t employee-backend:ci ./backend
